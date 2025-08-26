@@ -9,6 +9,7 @@ html {
 }
 
 .page {
+  display: flex;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -16,6 +17,79 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  justify-content:center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 1140px;
+  height: 534px;
+  top: 133px;
+  left: 30px;
+  gap: 30px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.content__list-container {
+  height: 534px;
+  overflow: auto;
+}
+
+.content__details {
+  display: flex; /*заменить далее на grid?*/
+  flex-direction: column;
+  height: 100%; /*сделать все размеры через MAX-height?*/
+  width: 100%;
+  gap: 26px; /*сделать все gap через относительные единицы?*/
+}
+
+.result__video-container {
+  width: 711px; /* сделать высоту и ширину через aspect-ratio 16:9? */
+  height: 386px;
+  margin-bottom: 16px; /* попытаться сделать через gap у элемента .result */
+}
+
+.result__video {
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.content__list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.content__video-card {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.content__video-card-thumbnail {
+  height: 103px;
+  min-width: 194px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
 }
 
 h1,
