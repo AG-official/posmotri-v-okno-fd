@@ -180,6 +180,10 @@ ol {
   background-color: #D9D9D9;
 }
 
+.search-form {
+
+}
+
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
@@ -190,8 +194,8 @@ ol {
   background-color: transparent;
   outline: 2px solid #fff;
   outline-offset: 1px;
-  width: 15px;
-  height: 15px;
+  width: 19px;
+  height: 19px;
   vertical-align: middle; /*возможно из-за него стоит криво*/
 }
 
@@ -203,6 +207,11 @@ ol {
   height: 100%;
   opacity: 0;
 }
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  opacity: 1;
+}
+  /* это ли нужно? */
 
 .search-form__fieldset {
   border: none;
@@ -233,7 +242,34 @@ ol {
   outline: none;
 }
 
+.search-form__label:has(:focus) {
+  outline: none;
+}
+
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 1px;
+}
+
+.button {
+  block-size: 34px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: inherit;
+  font-weight: 700;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.search-form__submit-button {
+  inline-size: 194px; /*или 33%?*/
+  align-self: end;
+
+}
+
+.more-button {
+  inline-size: 100%;
 }
