@@ -1,1 +1,1 @@
-https://github.com/AG-official/posmotri-v-okno-fd.git
+https://github.com/AG-official/posmotri-v-okno-fd.git 
