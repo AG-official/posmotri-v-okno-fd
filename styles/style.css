@@ -69,10 +69,18 @@ ol {
   justify-content: center;
   align-items: flex-end;
   width: 1140px;
-  height: 534px;
+  height: 532px;
   top: 133px;
   left: 30px;
   gap: 30px;
+}
+
+.content__details {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 399px;
+  gap: 20px;
 }
 
 .content__list-container {
@@ -88,18 +96,11 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  padding-top: 3px;
 }
 
 .content__list-item {
-  padding: 3px;
-}
-
-.content__details {
-  display: flex; /*заменить далее на grid?*/
-  flex-direction: column;
-  height: 100%; /*сделать все размеры через MAX-height?*/
-  width: 399px;
-  gap: 26px; /*сделать все gap через относительные единицы?*/
+  padding: 0 3px;
 }
 
 .result {
@@ -109,9 +110,9 @@ ol {
 
 .result__video-container {
   position: relative;
-  width: 711px; /* сделать высоту и ширину через aspect-ratio 16:9? */
+  width: 711px;
   height: 386px;
-  margin-bottom: 16px; /* попытаться сделать через gap у элемента .result */
+  margin-bottom: 16px;
 }
 
 .result__video {
@@ -132,14 +133,6 @@ ol {
   min-width: 194px;
   object-fit: cover;
   object-position: center;
-}
-
-.content__video-card-description-container {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 0;
-  flex-grow: 1;
-  overflow: hidden;
 }
 
 .title {
@@ -182,6 +175,14 @@ ol {
   outline: 1px solid white;
 }
 
+.content__video-card-description-container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 0;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
 .content__video-card-title {
   font-family: Oswald, Arial, sans-serif;
   font-size: 30px;
@@ -191,10 +192,11 @@ ol {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  line-height: 33px;
 }
 
 .content__video-card-description {
-  line-height: 16.2px;
+  line-height: 22px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
@@ -229,7 +231,7 @@ ol {
 .search-form__pseudo-checkbox {
   display: inline-block;
   background-color: transparent;
-  outline: 2px solid #fff;
+  outline: 1px solid #fff;
   outline-offset: 1px;
   width: 19px;
   height: 19px;
@@ -293,10 +295,11 @@ ol {
   color: #fff;
   background-color: transparent;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .search-form__submit-button {
-  inline-size: 194px; /*или 33%?*/
+  inline-size: 194px;
   align-self: end;
 }
 
