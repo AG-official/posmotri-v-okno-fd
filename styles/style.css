@@ -68,28 +68,24 @@ ol {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  width: 1140px;
-  height: 532px;
-  top: 133px;
-  left: 30px;
   gap: 30px;
 }
 
 .content__details {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 399px;
+  inline-size: 399px;
+  block-size: 100%;
   gap: 20px;
 }
 
 .content__list-container {
   position: relative;
-  height: 534px;
+  block-size: 300px;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  overflow: hidden auto;
+  overflow: auto;
 }
 
 .content__list {
@@ -106,18 +102,19 @@ ol {
 .result {
   display: flex;
   flex-direction: column;
+  gap: 16px;
 }
 
 .result__video-container {
   position: relative;
-  width: 711px;
-  height: 386px;
-  margin-bottom: 16px;
+  inline-size: 711px;
+  block-size: 386px;
+  /* margin-bottom: 16px; */
 }
 
 .result__video {
-  height: 100%;
-  width: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -129,8 +126,8 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  height: 103px;
-  min-width: 194px;
+  inline-size: 194px;
+  block-size: 103px;
   object-fit: cover;
   object-position: center;
 }
@@ -235,6 +232,7 @@ ol {
   outline-offset: 1px;
   width: 19px;
   height: 19px;
+  cursor: pointer;
 }
 
 .search-form__pseudo-checkbox::after {
@@ -253,12 +251,13 @@ ol {
 .search-form__label {
   display: flex;
   align-items: center;
-  width: fit-content;
+  inline-size: fit-content;
   gap: 5px;
 }
 
 .search-form__textfield {
   inline-size: 225px;
+  block-size: 27px;
   font-family: inherit;
   font-size: inherit;
   color: #fff;
@@ -275,6 +274,11 @@ ol {
 
 .search-form__textfield:focus {
   outline: none;
+}
+
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .search-form__label:has(:focus) {
@@ -304,7 +308,9 @@ ol {
 }
 
 .more-button {
-  inline-size: calc(100% - 4px);
+  inline-size: calc(100% - 8px);
+  padding-bottom: 3px;
+  place-self: center;
 }
 
 .button:hover {
